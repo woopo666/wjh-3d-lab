@@ -26,7 +26,7 @@ def main(argv=None):
  approve=sub.add_parser('approve');approve.add_argument('id');approve.add_argument('--reviewer',required=True);approve.add_argument('--notes',required=True)
  export=sub.add_parser('export');export.add_argument('id')
  native=sub.add_parser('native');native.add_argument('id');native.add_argument('--blender',required=True)
- gen=sub.add_parser('generate');gen.add_argument('id');gen.add_argument('--providers',default='providers.local.json');gen.add_argument('--gpu',default='0');gen.add_argument('--seed',type=int,default=67100)
+ gen=sub.add_parser('generate');gen.add_argument('id');gen.add_argument('--providers',default='providers.local.json');gen.add_argument('--gpu',default='0');gen.add_argument('--seed',type=int,default=67100);gen.add_argument('--offline',action='store_true')
  sub.add_parser('list');sub.add_parser('doctor')
  args=p.parse_args(argv);cmd=args.command
  if cmd=='doctor':
@@ -62,7 +62,7 @@ def main(argv=None):
  if cmd=='generate':
   if (d/'source.glb').exists():raise ValueError('source.glb already exists; generation will not overwrite it')
   from generation import generate
-  model=generate(ROOT,d,production['geometry']['provider'],read(args.providers),args.seed,args.gpu)
+  model=generate(ROOT,d,production['geometry']['provider'],read(args.providers),args.seed,args.gpu,args.offline)
   shutil.copy2(model,d/'source.glb');print('Generated. Check front orientation before bake.');return
  if cmd=='bake':
   if production['surface']['method']=='tl1-transfer':

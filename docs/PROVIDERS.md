@@ -19,3 +19,11 @@ Actual validation is reported in [VALIDATION.md](VALIDATION.md). TL1/Hunyuan int
 Common failures: missing extensions/checkpoints; torch/torchvision mismatch; `GLIBCXX`/libstdc++ ABI mismatch; unavailable OpenGL context for authoring. Fix the relevant environment, not unrelated system libraries. `doctor` checks authoring dependencies only.
 
 For a fair comparison use independent job IDs, the same reference and recorded settings. Preserve raw models and compare actual images; a favorite model for one character is not a universal winner.
+
+## Automatic checkpoint downloads
+
+Missing model directories are downloaded from the official Hugging Face repository specified by `repo_id` (defaults: microsoft/TRELLIS-image-large, microsoft/TRELLIS.2-4B, tencent/Hunyuan3D-2.1). Install `huggingface_hub` in each provider runtime. Downloads may be many GB. Existing prepared directories containing weights are reused; optional `required_files` lists relative files to detect incomplete installations. Set `revision` to pin a model revision. Existing custom files are not a checksum-verified installation.
+
+Hunyuan's missing RealESRGAN_x4plus.pth is fetched atomically from the [official release](https://github.com/xinntao/Real-ESRGAN/releases/tag/v0.1.0), following the upstream paint setup. Nonempty cached auxiliary files are reused; this is not a cryptographic integrity check. Model weights remain subject to their upstream licenses and are never committed to this repository.
+
+Use `python pipeline.py generate JOB_ID --offline` (or provider `offline: true` / `auto_download: false`) to prohibit hub downloads. Missing cached files then fail clearly. Other upstream auxiliary dependencies must also be cached; the offline flags cannot control arbitrary networking in third-party code.

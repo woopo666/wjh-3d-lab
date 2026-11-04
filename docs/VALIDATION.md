@@ -26,3 +26,10 @@ TL1 and Hunyuan adapters have not completed a fresh end-to-end GPU run for this 
 The gallery is a selected historical original-design batch. It uses TL2 geometry + reference-image correction, including humanoid 0.6% alignment and separate SD proportions. It is **not** the new 12-step GPU smoke output and is **not** evidence that donor-transfer works aesthetically. `gallery/data.json` records source image hashes.
 
 Numeric checks cannot detect every broken joint, rear texture, face mismatch or cloth intersection. Inspect views and pose silhouettes before approving. Runtime game weapon attachment checks remain the responsibility of the consuming application.
+
+## v0.2 gallery and checkpoint handling
+
+- Expanded to 12 historical original GLBs (6 humanoid, 6 SD), retaining input images and recorded hashes.
+- Playwright checked all 12 model loads, drag rotation, motion playback, lazy loading before opening, renderer disposal after closing, and a 390 px mobile viewport. Tested production bundle locally.
+- Missing checkpoint download/cache/offline handling has mocked unit coverage, including incomplete downloads and partial pipeline manifests. This does not claim a fresh multi-GB download or fresh GPU inference for every provider.
+- Face-offset comparison was excluded at the user's request.

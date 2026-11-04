@@ -2,6 +2,7 @@
   {
     "id": "aurelia",
     "label": "Aurelia \u00b7 humanoid",
+    "group": "humanoid",
     "geometry": "TRELLIS.2",
     "surface": "Reference image projection",
     "faceShift": 0.006,
@@ -32,11 +33,19 @@
         "sourceSha256": "b4265383a4921a07439504c579524cdc3ea1dd850ae02fb7819db8d5944503b3"
       }
     },
-    "limitations": "Rear hair/cloth can be flat or stretched. This is not a newly rerun benchmark."
+    "limitations": "Inspect rear hair, clothing and joints. Historical result, not a new benchmark.",
+    "model": {
+      "path": "models/aurelia.glb",
+      "bytes": 3857472,
+      "sha256": "8de9245bd68fba2bf89ccc3b236294be442d080ba347800184ebffa1e4825ccb",
+      "triangles": 48602,
+      "clips": 26
+    }
   },
   {
     "id": "aurelia-sd",
     "label": "Aurelia \u00b7 SD",
+    "group": "sd",
     "geometry": "TRELLIS.2",
     "surface": "Reference image projection",
     "faceShift": 0,
@@ -67,6 +76,443 @@
         "sourceSha256": "239070ce9d61c31bc214758ad0417cf03e412070eee2551bddb712f66a31cb30"
       }
     },
-    "limitations": "Rear hair/cloth can be flat or stretched. This is not a newly rerun benchmark."
+    "limitations": "Inspect rear hair, clothing and joints. Historical result, not a new benchmark.",
+    "model": {
+      "path": "models/aurelia-sd.glb",
+      "bytes": 3535216,
+      "sha256": "667cc31d87a04e10f5ca33ed0064c4f0cdecc22ffdffc8d23ddc8d42de5f684f",
+      "triangles": 47576,
+      "clips": 26
+    }
+  },
+  {
+    "id": "nyxara",
+    "label": "Nyxara \u00b7 humanoid",
+    "group": "humanoid",
+    "geometry": "TRELLIS.2",
+    "surface": "Reference image projection",
+    "faceShift": 0.006,
+    "kind": "Historical authoring result",
+    "images": {
+      "input": {
+        "path": "images/nyxara-input.webp",
+        "sourceSha256": "0a64137433f05e0cb03bea7bc28646bc7d634dc38dd962e1083a115fb0b8344a"
+      },
+      "front": {
+        "path": "images/nyxara-front.webp",
+        "sourceSha256": "0c5f1e593e812db28d02a88b9f4f4d7fa6c51c4c1cb87aef3e20c7a491dc9894"
+      },
+      "side": {
+        "path": "images/nyxara-side.webp",
+        "sourceSha256": "c3ca209fb8c915dc5c696cb7c0f5f2a8669d2cfa4a49c27d49bea907707ce1b3"
+      },
+      "back": {
+        "path": "images/nyxara-back.webp",
+        "sourceSha256": "73d7a208f3143c1f955eabb736d793320f27908ab3756a527b5984c6e12a60a6"
+      },
+      "run": {
+        "path": "images/nyxara-run.webp",
+        "sourceSha256": "e1ff38ad697bbd950a6d517a5f4e7f8325f7e6b4c2e63fcd07701b36643353e9"
+      },
+      "attack": {
+        "path": "images/nyxara-attack.webp",
+        "sourceSha256": "a155e011853351e42b4158787ca0a2e04e73af4730ccf0b3f31d8988a96b27d3"
+      }
+    },
+    "limitations": "Inspect rear hair, clothing and joints. Historical result, not a new benchmark.",
+    "model": {
+      "path": "models/nyxara.glb",
+      "bytes": 3553372,
+      "sha256": "a790183c5ffb14fb15ef226be5c284f345699f3c4f5590e5c0e5a80447bd4943",
+      "triangles": 48334,
+      "clips": 26
+    }
+  },
+  {
+    "id": "nyxara-sd",
+    "label": "Nyxara \u00b7 SD",
+    "group": "sd",
+    "geometry": "TRELLIS.2",
+    "surface": "Reference image projection",
+    "faceShift": 0,
+    "kind": "Historical authoring result",
+    "images": {
+      "input": {
+        "path": "images/nyxara-sd-input.webp",
+        "sourceSha256": "cb5a28ab8bcaab337af76ea8aea56510d244904b372ab1c832c2184fc5486eef"
+      },
+      "front": {
+        "path": "images/nyxara-sd-front.webp",
+        "sourceSha256": "1ff94442d6ba22ed505d15b30fcf57661b916b3f0685d5b20c408794256809c2"
+      },
+      "side": {
+        "path": "images/nyxara-sd-side.webp",
+        "sourceSha256": "7424f51433bf6fb4874b6009044f47dc93fba441338f40402ee3c532dac3f395"
+      },
+      "back": {
+        "path": "images/nyxara-sd-back.webp",
+        "sourceSha256": "a6a88ba0579a500ad60c12122b80b0091f85cb1936ab66ab7bab3a07e2239f7c"
+      },
+      "run": {
+        "path": "images/nyxara-sd-run.webp",
+        "sourceSha256": "04c19b213965448b2faeab4c57a098073d12c9ca1bc52f98fdcc829e84977ef6"
+      },
+      "attack": {
+        "path": "images/nyxara-sd-attack.webp",
+        "sourceSha256": "15d8e0482e8324e869a71b3a06db02a045ea81fa0bd8f4ded0c5cffd7134efdb"
+      }
+    },
+    "limitations": "Inspect rear hair, clothing and joints. Historical result, not a new benchmark.",
+    "model": {
+      "path": "models/nyxara-sd.glb",
+      "bytes": 3317944,
+      "sha256": "10ee6ccd404d57f879cda1f4e8d95b234adc90c1e4764c35e7540fe609ff3e69",
+      "triangles": 48976,
+      "clips": 26
+    }
+  },
+  {
+    "id": "marielle",
+    "label": "Marielle \u00b7 humanoid",
+    "group": "humanoid",
+    "geometry": "TRELLIS.2",
+    "surface": "Reference image projection",
+    "faceShift": 0.006,
+    "kind": "Historical authoring result",
+    "images": {
+      "input": {
+        "path": "images/marielle-input.webp",
+        "sourceSha256": "a3111b36e8ca5f2a98428aa0905a36112921e7b34c03da50c417bdd80369ad2d"
+      },
+      "front": {
+        "path": "images/marielle-front.webp",
+        "sourceSha256": "e7f4c41ae796557ba15224e8b47a6eddd85c2766edb563e7ad448e526ff10881"
+      },
+      "side": {
+        "path": "images/marielle-side.webp",
+        "sourceSha256": "ec27ef9d8ccdf1504afb11dd0ea3b5232bb64b36a30e06678fbe368c0234e2ba"
+      },
+      "back": {
+        "path": "images/marielle-back.webp",
+        "sourceSha256": "24874bffb43073eb9cd6bf35514f748d2d87b929b320162eded6c767a8cbb026"
+      },
+      "run": {
+        "path": "images/marielle-run.webp",
+        "sourceSha256": "baa84f57f1f43ea9579661c673af5dc1aacc75b587b8213b814b9406074f1a74"
+      },
+      "attack": {
+        "path": "images/marielle-attack.webp",
+        "sourceSha256": "23233deb55324876820d29a57899179bca683b2ad5d41853df9db16f016d565c"
+      }
+    },
+    "limitations": "Inspect rear hair, clothing and joints. Historical result, not a new benchmark.",
+    "model": {
+      "path": "models/marielle.glb",
+      "bytes": 3414032,
+      "sha256": "9bdd2e684f0737ef506b619132a39279889327a28265e3aec802cb74f3b95113",
+      "triangles": 49722,
+      "clips": 26
+    }
+  },
+  {
+    "id": "marielle-sd",
+    "label": "Marielle \u00b7 SD",
+    "group": "sd",
+    "geometry": "TRELLIS.2",
+    "surface": "Reference image projection",
+    "faceShift": 0,
+    "kind": "Historical authoring result",
+    "images": {
+      "input": {
+        "path": "images/marielle-sd-input.webp",
+        "sourceSha256": "834d6ad459399b7f3005b62af9c1a63faf617d82e881fb21a11ab9712529f452"
+      },
+      "front": {
+        "path": "images/marielle-sd-front.webp",
+        "sourceSha256": "ed0d66e2baf87f9ba634ca817d80afc76a61985e2c6760716cf2279d5a7bf9d2"
+      },
+      "side": {
+        "path": "images/marielle-sd-side.webp",
+        "sourceSha256": "28c4db742432e1f967217d4cef21eb753dd0928e2add28fc17f843a412f8b9af"
+      },
+      "back": {
+        "path": "images/marielle-sd-back.webp",
+        "sourceSha256": "fc15c83c2f4e489adf8c09c81be2cdd6abc8ea53480a6f94ccda4e12e5f7d01a"
+      },
+      "run": {
+        "path": "images/marielle-sd-run.webp",
+        "sourceSha256": "6ff8784447a2353315ab052bead2a43bb34686c9a083ec78945156eeb4030c90"
+      },
+      "attack": {
+        "path": "images/marielle-sd-attack.webp",
+        "sourceSha256": "f53dca5ff48016cde58bccba1d622f8d18b239309bb5f9a5dff303f115afe8b4"
+      }
+    },
+    "limitations": "Inspect rear hair, clothing and joints. Historical result, not a new benchmark.",
+    "model": {
+      "path": "models/marielle-sd.glb",
+      "bytes": 3895416,
+      "sha256": "9adad843bd5c63c3157ab519e05e4135476c229eda813f08a55b7c3097246470",
+      "triangles": 49208,
+      "clips": 26
+    }
+  },
+  {
+    "id": "eirlys",
+    "label": "Eirlys \u00b7 humanoid",
+    "group": "humanoid",
+    "geometry": "TRELLIS.2",
+    "surface": "Reference image projection",
+    "faceShift": 0.006,
+    "kind": "Historical authoring result",
+    "images": {
+      "input": {
+        "path": "images/eirlys-input.webp",
+        "sourceSha256": "7d35e5ceaf7d2909fe96136bbba2ab16be5f84f8a5b235a14a4cf27267c51421"
+      },
+      "front": {
+        "path": "images/eirlys-front.webp",
+        "sourceSha256": "3b854ae1bde91a75111143639fa2dbc893986bcdc06c775095b47046f3b53a55"
+      },
+      "side": {
+        "path": "images/eirlys-side.webp",
+        "sourceSha256": "d4e5f1ce6de9902bf60b81925770412790885877ca53e23a14fc06400b1e79bc"
+      },
+      "back": {
+        "path": "images/eirlys-back.webp",
+        "sourceSha256": "0287e3749ed90dd659d3eb221bdb3c5217b56f82241b3628515d233bcbe5425e"
+      },
+      "run": {
+        "path": "images/eirlys-run.webp",
+        "sourceSha256": "9a10d9b6f01091b540e1eea33b69b2f736ea6d2d0b935a79f5d9ec3efb737410"
+      },
+      "attack": {
+        "path": "images/eirlys-attack.webp",
+        "sourceSha256": "a43555fc3a5461679a29c9650a8e442bad72eedc9c81fd485f963f709c9d92b8"
+      }
+    },
+    "limitations": "Inspect rear hair, clothing and joints. Historical result, not a new benchmark.",
+    "model": {
+      "path": "models/eirlys.glb",
+      "bytes": 3730900,
+      "sha256": "5574ac9b4d948f492d567998df7ca648c1b507f09f232c85c159f5c01a3fa3de",
+      "triangles": 49908,
+      "clips": 26
+    }
+  },
+  {
+    "id": "eirlys-sd",
+    "label": "Eirlys \u00b7 SD",
+    "group": "sd",
+    "geometry": "TRELLIS.2",
+    "surface": "Reference image projection",
+    "faceShift": 0,
+    "kind": "Historical authoring result",
+    "images": {
+      "input": {
+        "path": "images/eirlys-sd-input.webp",
+        "sourceSha256": "de90d87734d5f04312c52a30d17489973b8f17de06f5b48c5ebea4dc68d87bef"
+      },
+      "front": {
+        "path": "images/eirlys-sd-front.webp",
+        "sourceSha256": "4201fe1cbcbfc8273f13c1f5789189ee43119db0befb2f7af6b880229b3abc64"
+      },
+      "side": {
+        "path": "images/eirlys-sd-side.webp",
+        "sourceSha256": "52fdd66a24b9a45c452e68d9b419ab38b6c00132fbfa7fdb844ba7311d7ffe84"
+      },
+      "back": {
+        "path": "images/eirlys-sd-back.webp",
+        "sourceSha256": "6ecc3e64e92e90b283c585e523d7a65eda5c5f890c7b2001b20a7d91dc1d7edb"
+      },
+      "run": {
+        "path": "images/eirlys-sd-run.webp",
+        "sourceSha256": "d7723edff0f0f7628fedc5427f3d46417ce8ca88542839ea04de6983ccb9becc"
+      },
+      "attack": {
+        "path": "images/eirlys-sd-attack.webp",
+        "sourceSha256": "e1212b9af9dd8587dcba78f5403bd50dbd24832618e13900b2e07942ffa4c791"
+      }
+    },
+    "limitations": "Inspect rear hair, clothing and joints. Historical result, not a new benchmark.",
+    "model": {
+      "path": "models/eirlys-sd.glb",
+      "bytes": 3775420,
+      "sha256": "616b76c5d3e8000bdf53f0f3da950097a1d0a7841d3a5d4006946ffada5ee771",
+      "triangles": 49267,
+      "clips": 26
+    }
+  },
+  {
+    "id": "kaede",
+    "label": "Kaede \u00b7 humanoid",
+    "group": "humanoid",
+    "geometry": "TRELLIS.2",
+    "surface": "Reference image projection",
+    "faceShift": 0.006,
+    "kind": "Historical authoring result",
+    "images": {
+      "input": {
+        "path": "images/kaede-input.webp",
+        "sourceSha256": "46f8ddaa8312b170499be53de4a1c00a6b4961af186fcc0a6a996d5ab202156a"
+      },
+      "front": {
+        "path": "images/kaede-front.webp",
+        "sourceSha256": "556853ab3d2c8e0e65db8a4a51bc670635de4ead3ef4408cd9d9055b1325c6c9"
+      },
+      "side": {
+        "path": "images/kaede-side.webp",
+        "sourceSha256": "07bf13541924b826870ed553aeae947cdb00c65aed691a73baee55c1f4b17eef"
+      },
+      "back": {
+        "path": "images/kaede-back.webp",
+        "sourceSha256": "0175d015ab6319dbd44f0c580a4c7b4ad28e8068ae7e9662d83b8b00d8be9563"
+      },
+      "run": {
+        "path": "images/kaede-run.webp",
+        "sourceSha256": "86e9eab02fed9ab2c5dc999702a80043b8df17d025f50f514caebb34412eae8b"
+      },
+      "attack": {
+        "path": "images/kaede-attack.webp",
+        "sourceSha256": "0d67b81c083b7833a4e7259e6f030c1b82e616b4c47614e9e6069aa4e06e3cf3"
+      }
+    },
+    "limitations": "Inspect rear hair, clothing and joints. Historical result, not a new benchmark.",
+    "model": {
+      "path": "models/kaede.glb",
+      "bytes": 3966036,
+      "sha256": "f5af118b6bde910f96a60af5505911e1c4b091a9566c52d837b440a4eb70bc64",
+      "triangles": 49982,
+      "clips": 26
+    }
+  },
+  {
+    "id": "kaede-sd",
+    "label": "Kaede \u00b7 SD",
+    "group": "sd",
+    "geometry": "TRELLIS.2",
+    "surface": "Reference image projection",
+    "faceShift": 0,
+    "kind": "Historical authoring result",
+    "images": {
+      "input": {
+        "path": "images/kaede-sd-input.webp",
+        "sourceSha256": "f52cc2f0c8c0196a3a6820b8efd8a4a0bba14462cad6a774c32b835c6238c822"
+      },
+      "front": {
+        "path": "images/kaede-sd-front.webp",
+        "sourceSha256": "f2b85415beb204b88670f23dc2cac68f4f5b99e7268f2fd0d003e9a8d9d93cea"
+      },
+      "side": {
+        "path": "images/kaede-sd-side.webp",
+        "sourceSha256": "f49760e2ac4d0fe9c4b07bccbd59eba4e1d8f7efdac78ee368ab5df6e8d70267"
+      },
+      "back": {
+        "path": "images/kaede-sd-back.webp",
+        "sourceSha256": "d2af70294c0be91ce1c40b09acdae785713080246e43fce97134c2239e825c08"
+      },
+      "run": {
+        "path": "images/kaede-sd-run.webp",
+        "sourceSha256": "5926022e8da411bdf3b9bc8811cb1c3ad05fdbbf9602aeb269131264d3238a1f"
+      },
+      "attack": {
+        "path": "images/kaede-sd-attack.webp",
+        "sourceSha256": "680b1b87b241a89024a739102f3c9f4124481bc227841f29c1a94c34a4b8b0f5"
+      }
+    },
+    "limitations": "Inspect rear hair, clothing and joints. Historical result, not a new benchmark.",
+    "model": {
+      "path": "models/kaede-sd.glb",
+      "bytes": 3723872,
+      "sha256": "c8e9bcd424124a1a593a3cc4b546e47273d38b0072590fd660099ca90646d069",
+      "triangles": 49735,
+      "clips": 26
+    }
+  },
+  {
+    "id": "seraphine",
+    "label": "Seraphine \u00b7 humanoid",
+    "group": "humanoid",
+    "geometry": "TRELLIS.2",
+    "surface": "Reference image projection",
+    "faceShift": 0.006,
+    "kind": "Historical authoring result",
+    "images": {
+      "input": {
+        "path": "images/seraphine-input.webp",
+        "sourceSha256": "2e133cbad719060a0de776962b10a1332d6e80eaaca1f9a22d694738c55311b8"
+      },
+      "front": {
+        "path": "images/seraphine-front.webp",
+        "sourceSha256": "71bf2d31a0fd0941e1cec1799be7a57a6e2248253e06dfa28b5da9ec4ba1e629"
+      },
+      "side": {
+        "path": "images/seraphine-side.webp",
+        "sourceSha256": "48f9156ec1060dca2a523cc6bf77081589cd52ff0a86eec87d7f347c25a54fb6"
+      },
+      "back": {
+        "path": "images/seraphine-back.webp",
+        "sourceSha256": "b5c3aab6f524fd9a3bba56b188f2725a38e5db4fc291ce44858b30aaa1c39a2c"
+      },
+      "run": {
+        "path": "images/seraphine-run.webp",
+        "sourceSha256": "78fe7e14e566dfe41f373b9d54ba3611b4053dc9014529d1ed6a9b07a56fc5f5"
+      },
+      "attack": {
+        "path": "images/seraphine-attack.webp",
+        "sourceSha256": "e8fb8da9cf79b16a3e3c92ab3f08e72299cdd3031a76ceaf7a4b78b88759e119"
+      }
+    },
+    "limitations": "Inspect rear hair, clothing and joints. Historical result, not a new benchmark.",
+    "model": {
+      "path": "models/seraphine.glb",
+      "bytes": 3793444,
+      "sha256": "53fd482c249fd7cdc5fb2e8647226c898d4dcfe0b0b0d36fe4eb58361ccab045",
+      "triangles": 47468,
+      "clips": 26
+    }
+  },
+  {
+    "id": "seraphine-sd",
+    "label": "Seraphine \u00b7 SD",
+    "group": "sd",
+    "geometry": "TRELLIS.2",
+    "surface": "Reference image projection",
+    "faceShift": 0,
+    "kind": "Historical authoring result",
+    "images": {
+      "input": {
+        "path": "images/seraphine-sd-input.webp",
+        "sourceSha256": "9cb639182a5f47c5a607bfb8c16d5bb22e8bc1590ef28b20f41fe6f51be508fe"
+      },
+      "front": {
+        "path": "images/seraphine-sd-front.webp",
+        "sourceSha256": "ba68ff9946c9b9bb233a758bb8af4212cd5905abbf72a5e3be18695c574263e0"
+      },
+      "side": {
+        "path": "images/seraphine-sd-side.webp",
+        "sourceSha256": "354a1d478234a66b90266c78af913ba46c9f93490f3fde4dc58884ba2b241723"
+      },
+      "back": {
+        "path": "images/seraphine-sd-back.webp",
+        "sourceSha256": "bb2395443d32e47ed9af711e4bd05fe982a7c6c523b43a720b3d1d97b16f793a"
+      },
+      "run": {
+        "path": "images/seraphine-sd-run.webp",
+        "sourceSha256": "3b378f47c1d455753351522f99d983297e6ca1780792d574b7a40d4c6f4c2821"
+      },
+      "attack": {
+        "path": "images/seraphine-sd-attack.webp",
+        "sourceSha256": "fb0b6111eb405eb387f4b6e8228c6f9a75735f6f88ce0f76cfeb6b66f1a222ee"
+      }
+    },
+    "limitations": "Inspect rear hair, clothing and joints. Historical result, not a new benchmark.",
+    "model": {
+      "path": "models/seraphine-sd.glb",
+      "bytes": 3511540,
+      "sha256": "afc5be044d4fa8fc2ef4337794d40779853b472a1b666598ae894073d6f4a9ae",
+      "triangles": 48980,
+      "clips": 26
+    }
   }
 ]

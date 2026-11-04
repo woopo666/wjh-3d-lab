@@ -51,3 +51,8 @@ npm run studio
 - 조류·뱀의 애니메이션 리깅은 미구현이므로 차단합니다.
 
 캐릭터별 해부학 설정은 `--config profile.json`으로 지정합니다. 어떤 모델이든 완벽하게 처리한다고 가정하지 말고 결과와 [검증 범위](VALIDATION.md)를 확인하세요.
+
+
+## Checkpoint downloads
+
+Missing weights download automatically from official model repositories on generation. Existing local weights are reused. Install `huggingface_hub` in the provider Python environment. For cached-only execution: `python pipeline.py generate JOB_ID --offline`. See [provider settings](PROVIDERS.md#automatic-checkpoint-downloads).

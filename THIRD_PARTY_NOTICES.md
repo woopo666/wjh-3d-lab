@@ -9,4 +9,4 @@ This repository's orchestration and authoring code is MIT licensed. Upstream mod
 - NumPy, SciPy, trimesh, Pillow, ModernGL, NetworkX and Rtree: installed through pip with their package licenses.
 - Blender is an external executable, not bundled.
 
-Gallery images are selected original designs from this project's authoring history, not official game/anime character assets. They are included for illustrating input/output and review limitations. Full generated models and training weights are excluded. The procedural calibration example is generated entirely by `examples/make_sample.py`.
+Gallery images are selected original designs from this project's authoring history, not official game/anime character assets. They are included for illustrating input/output and review limitations. Twelve original generated GLB samples are included for inspection. Training weights are excluded. The procedural calibration example is generated entirely by `examples/make_sample.py`.

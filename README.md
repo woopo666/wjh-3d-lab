@@ -108,3 +108,10 @@ python pipeline.py doctor
 On headless Linux use Xvfb for OpenGL tests. GitHub Actions checks tests, Node syntax and public-file hygiene. Workflows are enabled under `.github/workflows/`; copies under `examples/workflows/` are provided for reuse. GitHub Pages serves only the static gallery, not GPU inference.
 
 MIT for repository code. Model/runtime licenses are separate: [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). No model weights, personal hosts, credentials or third-party character assets are bundled.
+
+## Interactive sample gallery (v0.2)
+
+[Open the gallery](https://woopo666.github.io/wjh-3d-lab/): 12 original characters (6 humanoid + 6 SD), input images and actual GLBs. Drag to rotate, scroll/pinch to zoom, select an animation, or download the GLB. Models load on demand and release GPU resources when closed.
+
+
+Missing provider weights download from official repositories; existing files are reused. See [provider configuration and offline mode](docs/PROVIDERS.md#automatic-checkpoint-downloads). Build with `npm ci` then `npm run build:gallery`; output: `artifacts/gallery-site`.

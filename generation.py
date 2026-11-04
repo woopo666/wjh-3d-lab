@@ -1,8 +1,10 @@
 import json,sys,subprocess,hashlib,os
 from pathlib import Path
-def generate(root,job,provider,settings,seed=67100,gpu='0'):
+def generate(root,job,provider,settings,seed=67100,gpu='0',offline=False):
  runtime=settings.get(provider)
  if runtime is None:raise ValueError('Provider is not configured: '+provider)
+ runtime=dict(runtime)
+ if offline:runtime['offline']=True
  for key in ['python','source','model']:
   if not runtime.get(key):raise ValueError('Missing provider setting '+key)
  output=job/'generation'/provider;output.mkdir(parents=True,exist_ok=True)

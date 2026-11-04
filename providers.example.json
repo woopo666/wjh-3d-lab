@@ -1,5 +1,24 @@
 {
-  "trellis2": {"python": "/opt/trellis2/venv/bin/python", "source": "/opt/trellis2/source", "model": "/opt/trellis2/models"},
-  "trellis1": {"python": "/opt/trellis1/venv/bin/python", "source": "/opt/trellis1/source", "model": "/opt/trellis1/models"},
-  "hunyuan3d-2.1": {"python": "/opt/hunyuan/venv/bin/python", "source": "/opt/hunyuan/source", "model": "/opt/hunyuan/models", "realesrgan": "/opt/hunyuan/source/hy3dpaint/ckpt/RealESRGAN_x4plus.pth"}
+  "trellis2": {
+    "python": "/opt/trellis2/venv/bin/python",
+    "source": "/opt/trellis2/source",
+    "model": "/opt/trellis2/models",
+    "repo_id": "microsoft/TRELLIS.2-4B",
+    "auto_download": true
+  },
+  "trellis1": {
+    "python": "/opt/trellis1/venv/bin/python",
+    "source": "/opt/trellis1/source",
+    "model": "/opt/trellis1/models",
+    "repo_id": "microsoft/TRELLIS-image-large",
+    "auto_download": true
+  },
+  "hunyuan3d-2.1": {
+    "python": "/opt/hunyuan/venv/bin/python",
+    "source": "/opt/hunyuan/source",
+    "model": "/opt/hunyuan/models",
+    "realesrgan": "/opt/hunyuan/source/hy3dpaint/ckpt/RealESRGAN_x4plus.pth",
+    "repo_id": "tencent/Hunyuan3D-2.1",
+    "auto_download": true
+  }
 }

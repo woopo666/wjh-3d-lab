@@ -19,4 +19,5 @@ jobs:
       - run: npm ci
       - run: xvfb-run -a python -m unittest discover -s tests
       - run: node --check browser-stage.mjs && node --check studio.mjs
+      - run: npm run build:gallery
       - run: python tools/check_public_files.py

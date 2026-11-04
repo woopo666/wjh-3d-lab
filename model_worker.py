@@ -1,6 +1,7 @@
 """Isolated upstream adapters. Run using each provider's own CUDA environment."""
 import argparse,json,os,sys,time,hashlib,subprocess,gc
 from pathlib import Path
+from weight_downloads import resolve_model, ensure_file, offline, REALESRGAN
 def main():
  p=argparse.ArgumentParser();p.add_argument('request');a=p.parse_args();r=json.loads(Path(a.request).read_text());runtime=r['runtime'];source=Path(runtime['source']).resolve();out=Path(r['output']).resolve();out.mkdir(parents=True,exist_ok=True)
  os.environ['CUDA_VISIBLE_DEVICES']=str(r.get('gpu','0'));os.environ.setdefault('SPCONV_ALGO','native');sys.path.insert(0,str(source));os.chdir(source)
@@ -8,6 +9,7 @@ def main():
  from PIL import Image
  if not torch.cuda.is_available():raise RuntimeError('CUDA is required by this adapter')
  torch.manual_seed(r['seed']);torch.set_num_threads(4)
+ runtime['model']=resolve_model(r['provider'],runtime)
  image=Image.open(r['reference']).convert('RGBA');provider=r['provider'];steps=r.get('steps',24);size=r.get('textureSize',2048)
  record={'provider':provider,'seed':r['seed'],'steps':steps,'textureSize':size,'referenceSha256':hashlib.sha256(Path(r['reference']).read_bytes()).hexdigest(),'model':runtime['model'],'started':time.time(),'status':'running','gpu':torch.cuda.get_device_name(0)}
  try:record['sourceRevision']=subprocess.check_output(['git','-C',str(source),'rev-parse','HEAD'],text=True).strip()
@@ -56,7 +58,7 @@ def main():
    mesh.export(str(out/'shape.glb'));del pipe;gc.collect();torch.cuda.empty_cache()
    from textureGenPipeline import Hunyuan3DPaintPipeline,Hunyuan3DPaintConfig
    conf=Hunyuan3DPaintConfig(6,512);conf.texture_size=size
-   conf.realesrgan_ckpt_path=runtime.get('realesrgan',str(source/'hy3dpaint/ckpt/RealESRGAN_x4plus.pth'))
+   conf.realesrgan_ckpt_path=ensure_file(runtime.get('realesrgan',str(source/'hy3dpaint/ckpt/RealESRGAN_x4plus.pth')),REALESRGAN,offline(runtime))
    conf.multiview_cfg_path=str(source/'hy3dpaint/cfgs/hunyuan-paint-pbr.yaml');conf.custom_pipeline=str(source/'hy3dpaint/hunyuanpaintpbr')
    paint=Hunyuan3DPaintPipeline(conf);paint(mesh_path=str(out/'shape.glb'),image_path=r['reference'],output_mesh_path=str(out/'source.glb'))
   else:raise ValueError('Unsupported provider '+provider)
