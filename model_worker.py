@@ -21,7 +21,8 @@ def main():
    pipe=TrellisImageTo3DPipeline.from_pretrained(runtime['model']);pipe.cuda()
    with torch.inference_mode():
     result=pipe.run(image,seed=r['seed'],sparse_structure_sampler_params={'steps':steps},slat_sampler_params={'steps':steps})
-    mesh=postprocessing_utils.to_glb(result['gaussian'][0],result['mesh'][0],simplify=.95,texture_size=size)
+    original_faces=len(result['mesh'][0].faces);remove_ratio=max(0.,min(.99,1-r.get('triangles',45000)/max(1,original_faces)))
+    mesh=postprocessing_utils.to_glb(result['gaussian'][0],result['mesh'][0],simplify=remove_ratio,texture_size=size)
    mesh.export(str(out/'source.glb'))
   elif provider=='trellis2':
    from trellis2.pipelines import Trellis2ImageTo3DPipeline,rembg
@@ -49,6 +50,9 @@ def main():
    from hy3dshape.pipelines import Hunyuan3DDiTFlowMatchingPipeline
    pipe=Hunyuan3DDiTFlowMatchingPipeline.from_pretrained(runtime['model'])
    mesh=pipe(image=image,num_inference_steps=steps,octree_resolution=384,generator=torch.Generator(device='cuda').manual_seed(r['seed']))[0]
+   if len(mesh.faces)>r.get('triangles',45000):
+    import fast_simplification,trimesh
+    vertices,faces=fast_simplification.simplify(mesh.vertices,mesh.faces,target_count=r.get('triangles',45000));mesh=trimesh.Trimesh(vertices,faces,process=False)
    mesh.export(str(out/'shape.glb'));del pipe;gc.collect();torch.cuda.empty_cache()
    from textureGenPipeline import Hunyuan3DPaintPipeline,Hunyuan3DPaintConfig
    conf=Hunyuan3DPaintConfig(6,512);conf.texture_size=size
