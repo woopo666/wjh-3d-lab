@@ -1,0 +1,93 @@
+{
+  "source": "GFD 0.5.14 authoring pipeline",
+  "files": [
+    {
+      "path": "tools/rig-roster-character.js",
+      "sha256": "c85ca582892d2d9431802942dc5d62918d9fb1f7759689601b69f64c1bf73962"
+    },
+    {
+      "path": "src/fable-characters.js",
+      "sha256": "d96d6ef1e15c21cc368ecd8b6b8d290cbae737d6dbea646995d917097e499bd6"
+    },
+    {
+      "path": "src/sculpt.js",
+      "sha256": "b1353ef08a7aafb44f6e4ce75d466fdb29f362d8b176cddb9f2dc45be2516c7b"
+    },
+    {
+      "path": "tools/fit-surface-limbs.js",
+      "sha256": "7a1e960c90d6dbd05a5e74363a1698d4cc02ed749992ecf189dfae723e6c92e2"
+    },
+    {
+      "path": "tools/rig-prone-character.js",
+      "sha256": "90e12ed10ed67087f1051ddd2b6b87878ecad9db775a977bda0b5a73f64e6ed7"
+    },
+    {
+      "path": "tools/fit-prone-combat.js",
+      "sha256": "2b11d61c1b1defd71e40c6ae4bce3465a15b4fb66636953c6921c1c30b47a001"
+    },
+    {
+      "path": "tools/rig-doro-character.js",
+      "sha256": "3eac6d1afd58613321860e8341a0fbe451b1e7d0df2ca78dfc78fd2733b5cdc5"
+    },
+    {
+      "path": "tools/generated-character-gate.js",
+      "sha256": "83ca14cbdef5ab7aa6b32502e98d2b12e095751d71a92dcf4439df4de5b0c296"
+    },
+    {
+      "path": "tools/character-audit-studio.js",
+      "sha256": "4811ec56734338b646d1ff73676400430086f303dd4e7039906a47c7e88f1004"
+    },
+    {
+      "path": "src/gltf-loader.js",
+      "sha256": "90da5343e1367f9218dc3930abae083318514e93f50ada0dfc952aae6700b55d"
+    },
+    {
+      "path": "src/cartoon-material.js",
+      "sha256": "886402319727d1a5c12aa4124958ba98a7700fc2c2f33596ae2daa98c6f50d6f"
+    },
+    {
+      "path": "src/trellis2-material.js",
+      "sha256": "4e0b44cef26b44f08a7ab9f25e09a1777af39975eec5ab28a9b770da54d525bb"
+    },
+    {
+      "path": "src/health-pose.js",
+      "sha256": "e0cfe72634cd9d61a8645f180aa0e87dba8b130f1717800eb13d8d8e3a6fa3b5"
+    },
+    {
+      "path": "src/humanoid-health-clips.js",
+      "sha256": "00f7b76166c59b225cbc6d6b8f090e095ad3316601e84b7343a1fae38877a587"
+    },
+    {
+      "path": "src/defense-motion.js",
+      "sha256": "7c9399fd8ad1532023e6e6e069134273d9148d276d7ca939e2950d2ad35d890b"
+    },
+    {
+      "path": "src/running-motion.js",
+      "sha256": "fd9969f24f1a90d8643d9bf04ee935967a6c9a13034c706039e550ea434fb474"
+    },
+    {
+      "path": "tools/rig-deformation-audit.mjs",
+      "sha256": "7d087052c620b764a168ee22252a900ab0b9f049ab38ce76e8431c6c6ecd9514"
+    },
+    {
+      "path": "tools/bake-reference-v0501.py",
+      "sha256": "63ad36824579b73d2112a9815c5b420a785abc7568856d7f6271a6645169ac96"
+    },
+    {
+      "path": "tools/texture-projection.py",
+      "sha256": "ba3f967b4b5f97ee527eb79624336e7c769391dc32e734398ae1aa7a33277589"
+    },
+    {
+      "path": "tools/repair-character-surfaces.py",
+      "sha256": "2eb7c6470cbc4839a3ecd7bf493876e64582abce835927d7b0cb7a2dd47054af"
+    },
+    {
+      "path": "tools/orient-trellis2-v0500.py",
+      "sha256": "ede063f6bafe306ac99f5a79304239a69eb193845ad0866aa5a371def5bc6556"
+    },
+    {
+      "path": "tools/native-archive-v0500.py",
+      "sha256": "c8d7a6d1d7fa965aecd8ba46ab9faa5d2e489558af0af9c9e8fe4df6ddf54e3d"
+    }
+  ]
+}

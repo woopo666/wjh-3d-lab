@@ -1,0 +1,72 @@
+[
+  {
+    "id": "aurelia",
+    "label": "Aurelia \u00b7 humanoid",
+    "geometry": "TRELLIS.2",
+    "surface": "Reference image projection",
+    "faceShift": 0.006,
+    "kind": "Historical authoring result",
+    "images": {
+      "input": {
+        "path": "images/aurelia-input.webp",
+        "sourceSha256": "8972252ab69d976a4afc1a2c860742e3400c53bc562dca4d67f4bb0eb2a2a449"
+      },
+      "front": {
+        "path": "images/aurelia-front.webp",
+        "sourceSha256": "320b8c219ae6fdc087db877023e1625d4f52e9b9091839236b40b984866f995d"
+      },
+      "side": {
+        "path": "images/aurelia-side.webp",
+        "sourceSha256": "bbc85f0f8bdf5b09590db664fe65263de2fb4212938399619dddf1d136f56daa"
+      },
+      "back": {
+        "path": "images/aurelia-back.webp",
+        "sourceSha256": "68ebbb1cfba3ac5c2ab450fdfd327b5706bec9b56bca32b3a49324af02db5ef5"
+      },
+      "run": {
+        "path": "images/aurelia-run.webp",
+        "sourceSha256": "4d889e3597af0797b35865dec1eeeba1e363657871654d4457749f4d72151c57"
+      },
+      "attack": {
+        "path": "images/aurelia-attack.webp",
+        "sourceSha256": "b4265383a4921a07439504c579524cdc3ea1dd850ae02fb7819db8d5944503b3"
+      }
+    },
+    "limitations": "Rear hair/cloth can be flat or stretched. This is not a newly rerun benchmark."
+  },
+  {
+    "id": "aurelia-sd",
+    "label": "Aurelia \u00b7 SD",
+    "geometry": "TRELLIS.2",
+    "surface": "Reference image projection",
+    "faceShift": 0,
+    "kind": "Historical authoring result",
+    "images": {
+      "input": {
+        "path": "images/aurelia-sd-input.webp",
+        "sourceSha256": "1ff49d54f1433d4c3260a061fbc10e7cfce207abe3e718b8bc84f36337126479"
+      },
+      "front": {
+        "path": "images/aurelia-sd-front.webp",
+        "sourceSha256": "bcfbcbe3b3efbc605160d323627e5c577e3383541d0851e4f5a668026872a748"
+      },
+      "side": {
+        "path": "images/aurelia-sd-side.webp",
+        "sourceSha256": "ad9ea1f595d4baf3332379b6cf9b11a8aaf57bea29443e0541b9df9209bbdecf"
+      },
+      "back": {
+        "path": "images/aurelia-sd-back.webp",
+        "sourceSha256": "e16a7a4f9a3c651b431108dbb471b7871fa24b8bc93d19cedd5530f407fd08b2"
+      },
+      "run": {
+        "path": "images/aurelia-sd-run.webp",
+        "sourceSha256": "b80573179235f09378857c07dcb71ab29d7fcc0d69d63cc3a4bc17e152bb1ba4"
+      },
+      "attack": {
+        "path": "images/aurelia-sd-attack.webp",
+        "sourceSha256": "239070ce9d61c31bc214758ad0417cf03e412070eee2551bddb712f66a31cb30"
+      }
+    },
+    "limitations": "Rear hair/cloth can be flat or stretched. This is not a newly rerun benchmark."
+  }
+]
